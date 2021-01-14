@@ -39,7 +39,9 @@
      background-color: green;
  }
 
-
+.highlight{
+  background-color: white;
+}
 
     </style>
   </head>
@@ -90,7 +92,7 @@ var startGame = () => {
 
 var buildDeck = () =>{
     var newDeck= []
-    var suits = ['heart', 'spade', 'diamond', 'club']
+    var suits = ['hearts', 'spades', 'diamonds', 'clubs']
     var values = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     
     suits.forEach((suit) => {
@@ -141,16 +143,16 @@ return cards
 var displayCards = () => {
 
 var dealerCard0 = dealerCards[0]
-document.getElementById("dealer-0").innerHTML = dealerCard0.value + " of " + dealerCard0.suit
+document.getElementById("dealer-0").innerHTML = "<span class= 'highlight'>" + dealerCard0.value + " of " + dealerCard0.suit + "</span>"
 
 var dealerCard1 = dealerCards[1]
-document.getElementById("dealer-1").innerHTML = dealerCard1.value + " of " + dealerCard1.suit
+document.getElementById("dealer-1").innerHTML = "<span class= 'highlight'>" + dealerCard1.value + " of " + dealerCard1.suit + "</span>"
 
 var playerCard0 = playerCards[0]
-document.getElementById("player-0").innerHTML = playerCard0.value + " of " + playerCard0.suit
+document.getElementById("player-0").innerHTML = "<span class= 'highlight'>" + playerCard0.value + " of " + playerCard0.suit + "</span>"
 
 var playerCard1 = playerCards[1]
-document.getElementById("player-1").innerHTML = playerCard1.value + " of " + playerCard1.suit
+document.getElementById("player-1").innerHTML = "<span class= 'highlight'>" + playerCard1.value + " of " + playerCard1.suit + "</span>"
 
 }
 
